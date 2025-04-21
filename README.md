@@ -21,7 +21,7 @@ crontab -e
 **Configurations**
 Change the path to see the domain name /home/$domain name is a default path in CyberPanel. I had excluded vmail and backup directory you can exclude more via (! - name "excluded folder name")
 
-**CODE: **
+**CODE**
 DOMAINS=$(find /home/ -mindepth 1 -maxdepth 1 -type d ! -name 'backup' !  -name  'vmail')
 $domain_base=$(basename "$domain")
 
