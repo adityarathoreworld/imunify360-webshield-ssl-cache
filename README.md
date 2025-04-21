@@ -22,17 +22,18 @@ crontab -e
 Change the path to see the domain name /home/$domain name is a default path in CyberPanel. I had excluded vmail and backup directory you can exclude more via (! - name "excluded folder name")
 
 **CODE**
+
 DOMAINS=$(find /home/ -mindepth 1 -maxdepth 1 -type d ! -name 'backup' !  -name  'vmail')
 $domain_base=$(basename "$domain")
 
 **Change path for script and log**
+
 SCRIPT_PATH="/jsupply_new_ssl.py"
 LOG_PATH="/var/log/jsupply_new_ssl.log"
 
 **Change the path of SSL and filename for private key, chain and cert**
 
 BASE_PATH="/etc/letsencrypt/live"
-
 KEY_PATH="$BASE_PATH/$domain_base/privkey.pem"
 CERT_PATH="$BASE_PATH/$domain_base/cert.pem"
 CHAIN_PATH="$BASE_PATH/$domain_base/fullchain.pem"
