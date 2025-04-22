@@ -5,7 +5,7 @@ This is for the Imunify360 users who are facing issues with the webshield module
 
 **Instructions**
 
-ownload webshield_ssl_cache.sh
+download webshield_ssl_cache.sh
 change permission with chmod -x  webshield_ssl_cache.sh  
 Run this script in cron. 
 
@@ -24,6 +24,7 @@ Change the path to see the domain name /home/$domain name is a default path in C
 **CODE**
 
 DOMAINS=$(find /home/ -mindepth 1 -maxdepth 1 -type d ! -name 'backup' !  -name  'vmail')
+
 $domain_base=$(basename "$domain")
 
 **Change path for script and log**
